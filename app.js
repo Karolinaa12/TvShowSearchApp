@@ -1,4 +1,5 @@
 const form = document.querySelector(`#SearchForm`);
+const searchResultsContainer = document.querySelector(`#searchResults`);
 
 form.addEventListener(`submit`, async function (e) {
   e.preventDefault();
@@ -7,8 +8,16 @@ form.addEventListener(`submit`, async function (e) {
   const res = await axios.get(
     `https://api.tvmaze.com/search/shows?q=${searchTerm}`
   );
-  console.log(res.data);
-  //for (let i = 0; i < res.length; i++) {
-  //console.log(res.data[i].show.name);
-  //}
+  makeImages(res.data);
 });
+
+const makeImages = (shows) => {
+  for (let result of shows) {
+    if (result.show.image) {
+      const img = document.createElement(`img`);
+      img.src = result.show.image.medium;
+      searchResultsContainer.append(img);
+      img.classList.add(`img-fluid`);
+    }
+  }
+};
