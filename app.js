@@ -9,6 +9,7 @@ form.addEventListener(`submit`, async function (e) {
     `https://api.tvmaze.com/search/shows?q=${searchTerm}`
   );
   makeImages(res.data);
+  form.elements.query.value = "";
 });
 
 const makeImages = (shows) => {
@@ -17,7 +18,13 @@ const makeImages = (shows) => {
       const img = document.createElement(`img`);
       img.src = result.show.image.medium;
       searchResultsContainer.append(img);
+
       img.classList.add(`img-fluid`);
+      //console.log(result.show.name);
+      const filmInfo = document.createElement(`span`);
+      filmInfo.innerText = result.show.name;
+      filmInfo.classList.add(`info-display`);
+      searchResultsContainer.append(filmInfo);
     }
   }
 };

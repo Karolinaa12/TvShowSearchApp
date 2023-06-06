@@ -14,14 +14,18 @@ img {
   margin: 5px;
 }
 
-.results {
+.info-display {
+  color: #efefef;
+}
+
+/*.results {
   align-items: center;
   justify-content: space-evenly;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
-}
+}*/
 
 .container {
   margin: 20px auto;
