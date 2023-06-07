@@ -5,9 +5,8 @@ form.addEventListener(`submit`, async function (e) {
   e.preventDefault();
   //console.dir(form);
   const searchTerm = form.elements.query.value;
-  const res = await axios.get(
-    `https://api.tvmaze.com/search/shows?q=${searchTerm}`
-  );
+  const config = { params: { q: searchTerm } };
+  const res = await axios.get(`https://api.tvmaze.com/search/shows?`, config);
   makeImages(res.data);
   form.elements.query.value = "";
 });
