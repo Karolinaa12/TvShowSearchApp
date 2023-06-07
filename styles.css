@@ -17,6 +17,9 @@ img {
 .info-display {
   color: #efefef;
 }
+.card {
+  width: 18rem;
+}
 
 /*.results {
   align-items: center;

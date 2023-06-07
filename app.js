@@ -16,14 +16,19 @@ const makeImages = (shows) => {
     if (result.show.image) {
       const img = document.createElement(`img`);
       img.src = result.show.image.medium;
-      searchResultsContainer.append(img);
+      //searchResultsContainer.append(img);
+      const div = document.createElement(`div`);
+      searchResultsContainer.append(div);
+      div.classList.add(`card`);
+      div.append(img);
+      img.classList.add(`card-img-top`);
 
-      img.classList.add(`img-fluid`);
+      //img.classList.add(`img-fluid`);
       //console.log(result.show.name);
-      const filmInfo = document.createElement(`span`);
-      filmInfo.innerText = result.show.name;
-      filmInfo.classList.add(`info-display`);
-      searchResultsContainer.append(filmInfo);
+      //const filmInfo = document.createElement(`span`);
+      //filmInfo.innerText = result.show.name;
+      //filmInfo.classList.add(`info-display`);
+      //searchResultsContainer.append(filmInfo);
     }
   }
 };
