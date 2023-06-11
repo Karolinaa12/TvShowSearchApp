@@ -25,6 +25,7 @@ const makeImages = (shows) => {
       const divCard = document.createElement(`div`);
       div.append(divCard);
       divCard.classList.add(`card`);
+      divCard.classList.add(`text-bg-dark`);
       divCard.append(img);
       img.classList.add(`card-img-top`);
 
