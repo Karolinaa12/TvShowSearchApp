@@ -1,5 +1,5 @@
 body {
-  background-color: #31383d;
+  background-color: #101010;
   color: #212427;
 }
 
@@ -13,9 +13,6 @@ header {
 
 .info-display {
   color: #efefef;
-}
-.card {
-  width: 18rem;
 }
 
 /*.results {

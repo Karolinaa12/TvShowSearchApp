@@ -20,6 +20,7 @@ const makeImages = (shows) => {
       const div = document.createElement(`div`);
       searchResultsContainer.append(div);
       div.classList.add(`col`);
+      div.classList.add(`text-center`);
 
       const divCard = document.createElement(`div`);
       div.append(divCard);
