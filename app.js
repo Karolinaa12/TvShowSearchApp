@@ -3,6 +3,7 @@ const searchResultsContainer = document.querySelector(`#searchResults`);
 
 form.addEventListener(`submit`, async function (e) {
   e.preventDefault();
+  searchResultsContainer.innerHTML = "";
   //console.dir(form);
   const searchTerm = form.elements.query.value;
   const config = { params: { q: searchTerm } };
